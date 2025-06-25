@@ -1,84 +1,201 @@
-* {
+/* Google Fonts */
+body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+  background: #0d0c1d;
+  color: #f5f5f5;
+  transition: background 0.5s, color 0.5s;
 }
-body {
-  background: #fdfbff;
-  color: #1f2937;
-  line-height: 1.6;
+
+/* Dark/Light Toggle Support */
+body.light-mode {
+  background: #f5f5f5;
+  color: #111;
 }
-.hero {
-  background: linear-gradient(135deg, #f472b6, #c084fc);
-  color: white;
-  padding: 100px 20px;
-  text-align: center;
+
+a {
+  color: inherit;
+  text-decoration: none;
 }
-.hero h1 {
-  font-size: 2.5rem;
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid #333;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
-.hero span {
-  color: #fff700;
+
+.logo {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 24px;
+  color: #00fff7;
 }
-.social-icons a {
-  color: white;
-  font-size: 1.5rem;
-  margin: 0 10px;
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #00fff7;
+}
+
+/* Dark Mode Toggle */
+.toggle {
+  position: relative;
+}
+.toggle input {
+  display: none;
+}
+.toggle label {
+  width: 50px;
+  height: 25px;
+  background: #444;
+  border-radius: 20px;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+.toggle label::after {
+  content: '';
+  width: 20px;
+  height: 20px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 2.5px;
+  left: 3px;
   transition: 0.3s;
 }
-.social-icons a:hover {
-  color: #ffe4e6;
+.toggle input:checked + label::after {
+  left: 26px;
 }
+
+/* Hero Section */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 60px 40px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero-text {
+  max-width: 600px;
+}
+
+.hero-text h2 {
+  font-size: 32px;
+  color: #00fff7;
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.hero-img img {
+  max-width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 255, 247, 0.2);
+}
+
 .btn {
   display: inline-block;
   margin-top: 20px;
   padding: 10px 25px;
-  background: white;
-  color: #4c1d95;
+  background: #00fff7;
+  color: #000;
   border-radius: 8px;
-  text-decoration: none;
   font-weight: bold;
-  transition: background 0.3s;
+  transition: 0.3s ease;
 }
 .btn:hover {
-  background: #f3e8ff;
+  background: #02cccc;
+  transform: scale(1.05);
 }
+
+/* Projects */
 .projects {
-  padding: 50px 20px;
-  background: #f3f4f6;
-  text-align: center;
+  padding: 60px 40px;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(5px);
+  border-radius: 15px;
+  margin: 40px auto;
 }
-.project-list {
+
+.projects h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color:#5ad7ea;
+}
+
+.project-grid {
   display: grid;
-  gap: 20px;
-  max-width: 900px;
-  margin: auto;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
 }
+
 .project-card {
-  background: white;
-  padding: 20px;
+  background: #1a1a2e;
   border-radius: 12px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-.footer {
-  background: #4b5563;
-  color: white;
   padding: 20px;
+  box-shadow: 0 0 12px rgba(0,255,247,0.1);
+  transition: transform 0.3s ease;
+}
+.project-card:hover {
+  transform: translateY(-8px);
+}
+
+/* Contact */
+.contact {
+  padding: 50px 40px;
   text-align: center;
 }
-.fade-in {
-  opacity: 0;
-  transform: translateY(30px);
-  animation: fadeInUp 0.6s ease forwards;
+
+.contact h2 {
+  margin-bottom: 20px;
+  color: #00fff7;
 }
-.delay-1 { animation-delay: 0.3s; }
-.delay-2 { animation-delay: 0.6s; }
-.delay-3 { animation-delay: 0.9s; }
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
+
+.contact p a {
+  color: #00fff7;
+  font-weight: bold;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  border-top: 1px solid #444;
+  color: #888;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
   }
 }

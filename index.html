@@ -3,63 +3,69 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Arayan Ahmed - Portfolio</title>
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-9GRHX2PZ33"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-9GRHX2PZ33');
-</script>
+  <title>Arayan Ahmed | Futuristic Portfolio</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/a2d9f5a2d6.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
-<!-- Visitor Counter -->
-<script type="text/javascript" src="https://counter.websiteout.net/js/xyz"></script>
 <body>
 
-  <header class="hero">
-    <div class="container">
-      <h1 class="fade-in">Hi, I'm <span>Arayan Ahmed</span></h1>
-      <p class="fade-in delay-1">Web Developer & Content Creator</p>
-      <div class="social-icons fade-in delay-2">
-        <a href="https://instagram.com/me.arayan8" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://youtube.com/@TechWithArayan" target="_blank"><i class="fab fa-youtube"></i></a>
-        <a href="mailto:arayan@example.com"><i class="fas fa-envelope"></i></a>
-      </div>
-      <a href="#projects" class="btn fade-in delay-3">See My Work</a>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <h1 class="logo">Arayan.dev</h1>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="toggle">
+      <input type="checkbox" id="modeToggle" />
+      <label for="modeToggle"></label>
     </div>
-  </header>
+  </nav>
 
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-text">
+      <h2><span class="typewriter"></span></h2>
+      <p>I am from Pakistan and I want to become a <strong>software product developer</strong> at Meta (Instagram).</p>
+      <a href="#projects" class="btn">See My Work</a>
+    </div>
+    <div class="hero-img">
+      <img src="https://source.unsplash.com/600x400/?tech,neon" alt="Futuristic" />
+    </div>
+  </section>
+
+  <!-- Projects Section -->
   <section id="projects" class="projects">
-    <div class="container">
-      <h2 class="fade-in">Projects</h2>
-      <div class="project-list">
-        <div class="project-card fade-in delay-1">
-          <h3>Portfolio Website</h3>
-          <p>This website you're seeing now!</p>
-        </div>
-        <div class="project-card fade-in delay-2">
-          <h3>Instagram Tools</h3>
-          <p>Coming soon: Insta DP viewer, reel downloader, etc.</p>
-        </div>
-        <div class="project-card fade-in delay-3">
-          <h3>YouTube Channel</h3>
-          <p>Check out "Tech with Arayan" for latest videos.</p>
-        </div>
-
+    <h2>🚀 My Projects</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <h3>🌐 Portfolio Website</h3>
+        <p>This is my first ever portfolio website that you're viewing now. Built with passion & code.</p>
+      </div>
+      <div class="project-card">
+        <h3>📷 Instagram Tools</h3>
+        <p>Coming soon: Reel Downloader, DP Viewer, Story Saver, and more.</p>
+      </div>
+      <div class="project-card">
+        <h3>🎥 Tech with Arayan</h3>
+        <p>Check out my tech videos & tutorials on YouTube.</p>
       </div>
     </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h2>📩 Contact Me</h2>
+    <p>Email: <a href="mailto:arayanahmed44@gmail.com">arayanahmed44@gmail.com</a></p>
+    <p>Instagram: <a href="https://instagram.com/me.arayan8" target="_blank">@me.arayan8</a></p>
   </section>
 
   <footer class="footer">
     <p>&copy; 2025 Arayan Ahmed. All rights reserved.</p>
   </footer>
 
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
-</html>
+</html> 
